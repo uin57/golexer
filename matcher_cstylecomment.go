@@ -16,7 +16,7 @@ func (self *CStyleCommentMatcher) Match(tz *Tokenizer) (Token, error) {
 		return EmptyToken, nil
 	}
 
-	tz.ConsumeOne()
+	tz.ConsumeMulti(2)
 
 	begin := tz.Index()
 
